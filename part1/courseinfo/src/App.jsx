@@ -10,9 +10,9 @@ const Content = ({courseParts}) => {
   console.log(courseParts[0].exercises)
   return (
     <div>
-      <p>{courseParts[0].name} exercises={courseParts[0].exercises}</p>
-      <p>{courseParts[1].name} exercises={courseParts[1].exercises}</p>
-      <p>{courseParts[2].name} exercises={courseParts[2].exercises}</p>
+      <p>{courseParts[0].name} {courseParts[0].exercises}</p>
+      <p>{courseParts[1].name} {courseParts[1].exercises}</p>
+      <p>{courseParts[2].name} {courseParts[2].exercises}</p>
     </div>
   )
 }
