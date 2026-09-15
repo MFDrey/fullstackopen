@@ -15,19 +15,54 @@ const App = () => {
     'Programming without an extremely heavy use of console.log is same as if a doctor would refuse to use x-rays or blood tests when diagnosing patients.',
     'The only way to go fast, is to go well.'
   ]
-   
-  const [selected, setSelected] = useState(0)
 
+  const [selected, setSelected] = useState(0)
   const selectRandomAnecdote = () => {
-    const randomAnecdote = Math.floor(Math.random() * anecdotes.length);
-    setSelected(randomAnecdote);
-  };
+    const randomAnecdote = Math.floor(Math.random() * anecdotes.length)
+    setSelected(randomAnecdote)
+  }
+
+  const [votes, setVotes] = useState(() =>
+    Array(anecdotes.length).fill(0)
+  )
+
+  const vote = () => {
+    setVotes(previousVotes => {
+      const updatedVotes = [...previousVotes]
+      updatedVotes[selected] += 1
+      console.log('updatedVotes', updatedVotes)
+      return updatedVotes
+    })
+  }
 
   return (
-    <div>
-      <p>{anecdotes[selected]}</p>
-      <Button handleClick={selectRandomAnecdote} text='next anecdote' />
-    </div>
+    <>
+      <div id="anecdote-of-the-day">
+        <h1>Anecdote of the day</h1>
+        <p>{anecdotes[selected]}</p>
+        {votes[selected] === 1 ? (
+          <p>Has {votes[selected]} vote </p>
+        ) : (
+          <p>Has {votes[selected]} votes </p>
+        )}
+        <Button handleClick={vote} text="vote" />
+        <Button
+          handleClick={selectRandomAnecdote}
+          text="next anecdote"
+        />
+      </div>
+      <div id="anecdote-with-most-votes">
+        <h1>Anecdote with most votes</h1>
+        <p>{anecdotes[votes.indexOf(Math.max(...votes))]}</p>
+        {votes[votes.indexOf(Math.max(...votes))] === 1 ? (
+          <p>Has {votes[votes.indexOf(Math.max(...votes))]} vote </p>
+        ) : (
+          <p>
+            Has {votes[votes.indexOf(Math.max(...votes))]} votes{' '}
+          </p>
+        )}
+      </div>
+    </>
   )
 }
 

@@ -1,7 +1,7 @@
 <h3 align="center">Fullstackopen Course</h3>
 
 <p align="center"> This repo contains my solutions to the exercises in the Fullstackopen course.
-    <br> 
+    <br>
 </p>
 
 ## 📝 Table of Contents
@@ -24,7 +24,7 @@
 
 ## About <a name = "about"></a>
 
-I came across this course while looking for good courses that come at no cost. It's offered by the University of Helsinki. 
+I came across this course while looking for good courses that come at no cost. It's offered by the University of Helsinki.
 
 A brief excerpt from the course's about page:
 
@@ -34,4 +34,9 @@ The course is totally free of charge. You can get a certificate and even the Uni
 The course is worth 5-14 credits, and the content is the same as in the Full stack course held at the Department of Computer Science at the University of Helsinki in Spring 2023. There is also an associated project that is worth 1-10 credits."
 
 ## Part0 <a name = "part0"></a>
+
 Part0 focuses on introducing the course material. It has six exercises at the end. Three are just reading exercies while the remaining three involve creating sequence diagram using mermaid syntax.
+
+## Part1 <a name = "part1"></a>
+
+Part1 focuses on introducing React and some general Javascript concepts deemed appropriate to develop a better understanding of the course material, as well as dive into component states and event handlers. It also touches on debugging React apps.
