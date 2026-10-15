@@ -31,8 +31,8 @@ const App = () => {
       // Scenario 1: User doesn't exist
       personService
       .create(newPerson)
-      .then(newPersons => {
-        setPersons(persons.concat(newPersons))
+      .then(newPerson => {
+        setPersons(persons.concat(newPerson))
         setNewName('')
         setNewNumber('')
       })
